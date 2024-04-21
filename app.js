@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended:true}));
 
 app.use("api/user",indexRouter);
 app.all("*",(req,res) => {
-    res.status(404).json({ url:req.url, message:"Page not found"});
+    res.status(404).json({ url:req.url, success:false,message:"Page not found"});
 });
 
 
